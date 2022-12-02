@@ -1,0 +1,1121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding-left: 0px;
+    padding: 0px;
+}
+
+/* HEADER */
+
+
+header {
+
+    margin: 1.5% 4% 0% 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#logo img {
+    max-height: 40px;
+    height: auto;
+    padding-left: 20px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    border: 1px solid white;
+}
+
+header li {
+    padding: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 40px;
+
+}
+
+/*Ne pas mettre :visited après :hover sinon ne fonctionne pas*/
+nav a:visited {
+    color: black;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:hover {
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+    margin: 2px 0px 0px 0px;
+}
+
+
+/*header portable*/
+@media screen and (min-width:1px) and (max-width:768px) {
+
+
+
+    header {
+        display: flex;
+        flex-direction: column;
+        margin: 0% 0% 2% 2%;
+    }
+
+    header #logo {
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav ul {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        border-bottom: 3px solid #F2F2F2;
+
+    }
+
+    nav li {
+
+        /* Décalle le container li vers le bas avec un padding top*/
+        width: 47vw;
+
+    }
+
+    nav li:hover {
+        border-bottom: 3px solid #0065FC;
+        margin-bottom: -3px;
+
+
+    }
+
+    nav a:hover {
+        border-top: none;
+
+    }
+
+
+
+}
+
+/* MAIN-SEARCH */
+#search {
+    margin: 2% 4% 0% 4%;
+}
+
+#search .title {
+    margin-bottom: 2%;
+}
+
+#search .title h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#search .title p {
+    font-size: 14px;
+
+}
+
+#bar {
+    display: flex;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+
+}
+
+#search .icon {
+    display: flex;
+    background-color: #F2F2F2;
+    height: 40px;
+    width: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+
+#button-1 {
+    display: inline-block;
+    color: #F2F2F2;
+    font-weight: 800;
+    /*400 = regular*/
+    background-color: #0065FC;
+    height: 40px;
+    width: 120px;
+    border: 1px solid #0065FC;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 600;
+
+}
+
+#button-2 {
+    /*Le bouton caché qui remplace le bouton sur mobile*/
+    color: #F2F2F2;
+    background-color: #0065FC;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #0065FC;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
+}
+
+input::placeholder {
+    color: black;
+    opacity: 1;
+    font-size: 15px;
+}
+
+#text {
+    height: 40px;
+    border: 1px solid rgb(248, 248, 255, 0.5);
+    color: black;
+    font-weight: bold;
+}
+
+#search #a {
+    /* A completer*/
+    border: 1px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/*SEARCH mobile*/
+@media screen and (min-width:1px) and (max-width:768px) {
+
+    #search {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0% 0% 0% 8%
+    }
+
+    #button-1 {
+        display: none;
+    }
+
+    #button-2 {
+        display: inline-block;
+    }
+
+    #search .title {
+        display: flex;
+        flex-flow: column wrap;
+        max-width: 300px;
+    }
+
+    #search .title h1 {
+        max-width: 100%;
+    }
+
+
+
+}
+
+/* MAIN-FILTER */
+#filter {
+    margin: 0% 4% 0% 4%;
+}
+
+
+#filter .body {
+    display: flex;
+    align-items: center;
+}
+
+#filter .body .title {
+    margin-left: 0%;
+}
+
+#filter a {
+    text-decoration: none;
+}
+
+#filter a:visited {
+    /* On remet en noir les liens visités donc ici tous les articles de host*/
+    color: black;
+}
+
+#filter a:link {
+    /* lien non visités */
+    color: black;
+}
+
+#filter .article-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+#filter h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#filter .article-container {
+    display: flex;
+
+}
+
+#filter .article-container article {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #F2F2F2;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    height: 34px;
+    /* Pas plus ni moins sinon la bordure ne s'enroule pas sur les icons*/
+    margin: 7px;
+}
+
+#filter .article-container article:hover {
+    background-color: #DEEBFF;
+}
+
+#filter .article-container i {
+    margin-left: -22px;
+    /*caler à gauche l'icone*/
+    position: absolute;
+    /*on veut qu'il puisse recouvrir le cadre d'article*/
+    border-radius: 50%;
+    padding: 13px;
+    /*il faut le faire dépasser du cadre*/
+    background-color: #DEEBFF;
+    color: #0065FC;
+}
+
+#filter .article-container h2 {
+    position: relative;
+    margin-left: 40px;
+    /*On le position à droite de l'icone et à gauche du cardre de l'article*/
+    margin-right: 10px;
+}
+
+#filter .footer {
+    display: flex;
+    align-items: center;
+    margin: 0% 0% 2% 0%;
+}
+
+#filter .footer i {
+    border: 1px solid #DEEBFF;
+    border-radius: 50px;
+    color: #0065FC;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#filter .footer p {
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+/*Filter Tablette*/
+@media screen and (min-width:1px) and (max-width:992px) {
+
+    #filter .article-container {
+        display: flex;
+        flex-wrap: wrap;
+        /*Pour la border des articles change de ligne quand plus la place*/
+    }
+
+}
+
+/*Filter Mobile*/
+@media screen and (min-width:1px) and (max-width:768px) {
+
+
+
+    #filter {
+        margin: 4% 0% 0% 5%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #filter .body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0% 0% 0% 2%;
+    }
+
+    #filter .body .title h2 {
+        display: flex;
+        margin: 80% 0% 30% 20%
+    }
+
+
+    #filter .article-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 400px;
+
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #filter .article-container a {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #filter .footer {
+        margin-left: 2%;
+        max-width: 350px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #filter .footer i {
+        margin-top: 2%;
+        border-radius: 50%;
+        padding: 10px;
+    }
+}
+
+/* MAIN-HOST */
+
+/*HOST AND POPULAR*/
+
+.bold {
+    font-weight: 800;
+}
+
+.empty-star {
+    color: #F2F2F2;
+    font-size: 13px;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+.full-star {
+    color: #0065FC;
+    font-size: 13px;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+.black-star {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5%;
+    margin-right: 1%;
+}
+
+#host-and-popular {
+
+    margin: 0% 4% 0% 4%;
+
+    display: flex;
+}
+
+#host-and-popular a {
+    text-decoration: none;
+}
+
+#host-and-popular a:visited {
+    /* On remet en noir les liens visités donc ici tous les articles de host*/
+    color: black;
+}
+
+#host-and-popular a:link {
+    /* lien non visités */
+    color: black;
+}
+
+.rating i {
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+/* HOST */
+
+#host .title h3 {
+    margin: 0% 0% 3% 1%;
+    padding: 0% 0% 0% 0%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+#host {
+    max-width: 75%;
+    /* Partage largeur entre host-body et host-popular*/
+    flex-direction: column;
+    background-color: #F2F2F2;
+    margin-right: 2%;
+    border-radius: 15px;
+    padding: 3% 2% 0% 2%;
+}
+
+
+
+
+
+#host .article-container {
+    display: flex;
+    /* disposition à l'horizontale pour les articles de flex-container*/
+    flex-wrap: wrap;
+    /* Permission de retour à la ligne quand la largeur des articles/img est dépassée */
+    justify-content: space-between;
+}
+
+#host .article-container a {
+    padding: 0.5%;
+    width: 31%;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 4%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+#host .article-container article {
+    padding: 0px;
+    margin-left: 2%;
+}
+
+#host .article-container article p {
+    font-size: 14px;
+    margin: 0% 0% 2% 2%;
+
+}
+
+#host .article-container article h4 {
+    margin: 0% 0% 2% 2%;
+}
+
+
+#host .article-container article .rating {
+    padding: 2%;
+}
+
+
+
+
+
+
+
+#host .article-container article img {
+    height: 8vw;
+    /* taille/largeur des images relative à la taille/largeur du bloc initial*/
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    /* l'image doit s'adapter à son conteneur comme un overflow:hidden*/
+}
+
+#host .footer h3 {
+    margin-left: 1.5%;
+    margin-bottom: 4%;
+
+}
+
+
+/*POPULAR*/
+
+
+#popular {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding: 2% 2% 0% 2%;
+
+}
+
+#popular .header {
+    margin: 0% 2% 1% 0%;
+    padding: 0% 0% 0% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* On sépare le titre et l'icone */
+
+}
+
+#popular .header .title {
+    margin: 0% 2% 1% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+#popular .article-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#popular .article-container a {
+    display: flex;
+    background-color: white;
+    padding: 1%;
+    /*padding autour du contenu de l'article*/
+    margin: 0% 3% 8% 0%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px 10px #F2F2F2;
+}
+
+#popular .article-container article {
+    display: flex;
+    width: 100%;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+}
+
+#popular .article-container article .text {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0% 0% 0% 2%;
+}
+
+
+#popular .article-container article .text .para {
+    padding: 0% 0% 0% 0%;
+    margin: 0% 0% 0% 0%;
+}
+
+
+#popular .article-container article h4 {
+    font-size: 16px;
+    margin: 0% 0% 4% 2%;
+}
+
+#popular .article-container article p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0% 0% 0% 2%;
+}
+
+
+
+
+#popular .article-container article img {
+    width: 9vw;
+    height: 9vw;
+    min-height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    object-fit: cover;
+    /* l'image doit s'adapter à son conteneur comme un overflow:hidden*/
+}
+
+
+
+
+
+
+
+
+/*tablette img*/
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+    /*host img*/
+
+
+
+    /*pop img*/
+
+
+    #host-and-popular {
+        display: flex;
+        flex-direction: column;
+        margin-right: 2%;
+    }
+
+    #host {
+        max-width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0%;
+    }
+
+    #popular {
+        width: 100%;
+        margin-right: 2%;
+    }
+}
+
+/*mobile img*/
+@media screen and (min-width:1px) and (max-width:768px) {
+
+
+
+
+    /* mobile both*/
+    #host-and-popular {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: white;
+
+    }
+
+    #host a:visited {
+        /* On remet en noir les liens visités donc ici tous les articles de host*/
+        color: black;
+    }
+
+    #host a:link {
+        /* lien non visités */
+        color: black;
+    }
+
+    /* mobile host*/
+    #host {
+        min-width: 100%;
+        /* Partage largeur entre host-body et host-popular*/
+        flex-direction: column;
+        /* column for title host-article-container et show-more*/
+        border-radius: 0px;
+        margin: 0% 0% 0% 0%;
+        padding: 0% 0% 6% 0%;
+        background-color: white;
+
+    }
+
+    #host .title h3 {
+
+        margin: 10% 0% 6% 4%;
+    }
+
+
+    #host .article-container {
+        display: flex;
+        /* disposition à l'horizontale pour les articles de flex-container*/
+        flex-direction: column;
+        justify-content: space-between;
+        /*espace entre les articles pour prendre toute la largeur*/
+        margin: 0% 4% 0% 4%;
+
+
+    }
+
+    #host .article-container a {
+        padding: 1%;
+        /*padding qui va rembourer le a de l'article*/
+        width: 100%;
+        /*on partage le width de a à 30% pour caller 3 images + remplir côté droit*/
+        margin: 0% 0% 6% 0%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 10px #F2F2F2;
+    }
+
+
+    #host article {
+
+        border-radius: 15px;
+    }
+
+
+    #host .article-container article img {
+        height: 22vw;
+        min-width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+        /* l'image doit s'adapter à son conteneur comme un overflow:hidden*/
+    }
+
+    #host .article-container article h4 {
+        margin: 2% 0% 0% 2%;
+    }
+
+    #host .article-container article p {
+        margin: 2% 0% 0% 2%;
+    }
+
+    #host .footer h3 {
+
+        margin: 3% 0% 6% 6%;
+    }
+
+
+
+    /* mobile popular*/
+    #popular {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #F2F2F2;
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
+        border-radius: 0px;
+
+
+
+
+
+    }
+
+    #popular .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* On sépart le titre et l'icone */
+
+
+    }
+
+    #popular .header .title h3 {
+        margin: 15% 3% 15% 8%;
+        min-width: 100%;
+    }
+
+    #popular .header i {
+        margin: 0% 5% 0% 0%
+    }
+
+
+
+    #popular .article-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 4% 7% 4%;
+
+
+    }
+
+    #popular .article-container a {
+        margin: 0% 0% 3% 0%;
+        display: flex;
+        background-color: white;
+        padding: 1.5%;
+        box-shadow: 5px 5px 5px #F2F2F2;
+
+    }
+
+    .rating {
+        margin-bottom: 2%;
+    }
+
+    #popular .article-container article {
+        display: flex;
+        width: 95%;
+    }
+
+    #popular .article-container article img {
+        width: 25vw;
+        height: 28vw;
+        min-height: 100%;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+        object-fit: cover;
+        /* l'image doit s'adapter à son conteneur comme un overflow:hidden*/
+    }
+
+    #popular .article-container article .text {
+        padding-left: 10%;
+    }
+}
+
+/* MAIN-ACTIVITY */
+#activities {
+    margin: 0% 3% 0% 3%;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#activities .title h3 {
+    margin: 3% 0% 0% 1%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#activities h5 {
+    margin-left: 4%;
+    padding-bottom: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#activities .article-container a {
+    text-decoration: none;
+
+
+}
+
+#activities .article-container a:link {
+    color: black;
+}
+
+#activities .article-container a:visited {
+    color: black;
+}
+
+#activities .article-container {
+    display: flex;
+}
+
+#activities .solo {
+    width: 24%;
+    margin: 1%;
+}
+
+#activities .duo {
+    width: 24%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+#activities .article-container img {
+    border-radius: 20px 20px 0px 0px;
+}
+
+#activities .article-container article {
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 10px 10px 10px #F2F2F2;
+
+}
+
+#activities .image-activities-1 {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    object-position: 40%;
+    /*écrasement vers le bas*/
+
+}
+
+#activities .image-activities-2 {
+    width: 100%;
+    height: 14vw;
+    object-fit: cover;
+    object-position: 60% 40%;
+}
+
+#activities .image-activities-3 {
+    width: 100%;
+    height: 7vw;
+    object-fit: cover;
+    object-position: 70% 30%;
+    /*écrasement vers le bas*/
+
+}
+
+#activities .image-activities-4 {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    object-position: 55% 60%;
+    filter: brightness(1.5);
+    /*augmente luminositée de l'image*/
+}
+
+#activities .image-activities-5 {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+    object-position: 70% 0%;
+}
+
+#activities .image-activities-6 {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+    object-position: 50% 0%;
+}
+
+
+/*mobile*/
+@media screen and (min-width:1px) and (max-width:768px) {
+
+
+
+    #activities {
+        background-color: white;
+        margin: 0% 8% 0% 4%;
+
+    }
+
+    #activities .title h3 {
+        margin: 5% 0% 0% 6%;
+    }
+
+    #activities .solo {
+        width: 100%;
+        margin: 1%;
+        padding: 0%;
+    }
+
+    #activities .duo {
+        width: 100%;
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #activities .solo article {
+        margin: 0% 2% 0% 2%;
+    }
+
+    #activities .duo article {
+        margin: 0% 0% 0% 0%;
+    }
+
+
+    #activities .article-container a {
+        padding: 2%;
+
+    }
+
+
+
+    #activities .article-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+        margin: 0% 8% 0% 4%;
+    }
+
+    #activities .article-container h5 {
+        font-size: 17px;
+    }
+
+
+    #activities .solo img {
+        max-height: 200px;
+        /*réduit la taille des imgages fortes têtes en .solo*/
+
+
+    }
+
+
+    #activities .solo img {
+        height: 25vw;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #activities .duo img {
+        height: 25vw;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+
+    #activities .article-container img {
+        height: 30vw;
+        min-width: 100%;
+        object-position: 50% 50%;
+        object-fit: cover;
+
+    }
+
+}
+
+
+
+/* FOOTER  */
+footer {
+    margin: 0% 2% 0% 2%;
+    background-color: #F2F2F2;
+    display: flex;
+    padding-bottom: 3%;
+}
+
+
+
+
+footer article h6 {
+    margin-left: 8%;
+    /* On réduit la marge et le padding contre la ligne*/
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer ul {
+    margin-top: -5%;
+    margin-left: 0%;
+    /* On réduit la marge et le padding contre la ligne*/
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 2%;
+    font-size: 15px;
+
+}
+
+footer article {
+    min-width: 30%;
+    /*partage l'espace du footer entre les 3 articles mais garde la marge* et le padding*/
+}
+
+
+@media screen and (min-width:1px) and (max-width:768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin: 5% 0% 0% 0%;
+    }
+
+    footer article h6 {
+        margin: 12% 0% 3% 9%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    footer ul {
+        margin: 0% 0% 0% 9%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
+}
